@@ -17,4 +17,6 @@ var options = {
 tls.createServer(options, function (s) {
   s.write(msg+"\n");
   s.pipe(s);
-}).listen(8000);
+}).listen(process.env.PORT, "0.0.0.0");
+    // We're using the special Cloud9 IDE port and hostname here;
+    // you'll probably just want something like (8080, "127.0.0.1")
