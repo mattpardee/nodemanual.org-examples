@@ -1,4 +1,4 @@
-// Example: Getting whole characters
+// Example: Getting whole characters from charAt
 
 var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
 for (var i=0, chr; i < str.length; i++) {

@@ -1,4 +1,4 @@
-// Example: Displaying characters at different locations in a string
+// Example: Displaying characters at different locations in a string with charAt
 
 var anyString="Brave new world";
 
