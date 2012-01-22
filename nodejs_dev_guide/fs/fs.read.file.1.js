@@ -1,6 +1,8 @@
+// Example: Reading a real file
+
 var fs = require('fs');
 
-fs.readFile('/etc/hosts', 'utf8', function (err,data) {
+fs.readFile('/someDir/someFile', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
   }

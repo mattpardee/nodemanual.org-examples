@@ -1,17 +1,17 @@
+// Example: Performing a POST
+
 var http = require('http');
 
-//The url we want
 var options = {
-  host: 'www.nodejitsu.com',
-  path: '/',
-  //since we are listening on a custom port, we need to specify it by hand
-  port: '1337',
-  //This is what changes the request to a POST request
+  host: 'posttestserver.com',
+  path: '/post.php',
   method: 'POST'
 };
 
-callback = function(response) {
-  var str = ''
+// we don't really need a callback for this example, 
+// so let's leave not include one
+var request = http.request(options, function (response) { 
+  var str = '';
   response.on('data', function (chunk) {
     str += chunk;
   });
@@ -19,10 +19,8 @@ callback = function(response) {
   response.on('end', function () {
     console.log(str);
   });
-}
+});
 
-var req = http.request(options, callback);
-
-//This is the data we are POSTing, it needs to be a string or a buffer
-req.write("hello world!");
-req.end();
+// the data to POST needs to be a string or a buffer
+request.write("Shot through the heart, and you're to blame. Darling, you give love a bad name.");
+request.end();

@@ -1,23 +1,32 @@
-var http = require('http');
+// Example: Perform a GET request and write the results to a file
 
-//The url we want
+var http = require('http');
+var fs = require('fs');
+
+//The url we want, plus the path and options we need
 var options = {
-  host: 'www.random.org',
-  path: '/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
+  host: 'twitter.com',
+  path: '/statuses/public_timeline.json',
+  method: 'GET'
 };
 
-callback = function(response) {
-  var str = '';
+var processPublicTimeline = function(response) {
+  var tweetData = '';
 
-  // another chunk of data has been recieved, so append it to `str`
-  response.on('data', function (chunk) {
-    str += chunk;
+  // keep track of the data you receive
+  response.on('data', function(tweets) {
+    tweetData += tweets + "\n";
   });
 
-  //the whole response has been recieved, so we just print it out here
-  response.on('end', function () {
-    console.log(str);
+  // finished? ok, write the data to a file
+  response.on('end', function() {
+    fs.writeFile('blather.txt', tweetData.toString(), function (err) {
+      if (err) throw err;
+      console.log('It\'s saved!');
+    });
   });
 }
 
-http.request(options, callback).end();
+// make the request, and then end it, to close the connection
+http.request(options, processPublicTimeline).end();
+

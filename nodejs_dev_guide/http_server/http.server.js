@@ -1,7 +1,9 @@
+// Example: Running a simple server
+
 var http = require('http');
 var requestListener = function (req, res) {
     res.writeHead(200);
-    res.end('Hello, World!\n');
+    res.end('Hello, HTTP!\n');
 }
 
 var server = http.createServer(requestListener);
