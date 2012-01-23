@@ -1,5 +1,6 @@
 // Example
 
+var assert = require("assert");
 var crypto = require("crypto");
 
 // Test encryption and decryption

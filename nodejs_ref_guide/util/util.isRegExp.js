@@ -1,11 +1,11 @@
 // Example
 
 var util = require('util');
- 
-util.isRegExp(/some regexp/)
+
+console.log(util.isRegExp(/some regexp/));
   // true
-util.isRegExp(new RegExp('another regexp'))
+console.log(util.isRegExp(new RegExp('another regexp')));
   // true
-util.isRegExp({})
+console.log(util.isRegExp({}));
   // false
  

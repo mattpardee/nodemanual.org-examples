@@ -1,6 +1,8 @@
-var gzip = zlib.createGzip();
 var fs = require('fs');
-var inp = fs.createReadStream('excerpt.txt');
-var out = fs.createWriteStream('excerpt.txt.gz');
+var zlib = require('zlib');
+
+var gzip = zlib.createGzip();
+var inp = fs.createReadStream(__dirname + '/excerpt.txt');
+var out = fs.createWriteStream(__dirname + 'excerpt.txt.gz');
 
 inp.pipe(gzip).pipe(out);

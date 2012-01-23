@@ -1,10 +1,11 @@
 // Example: Using `vm.runInThisContext` and `eval` to run the same code:
- 
 
-var localVar = 123,
-    usingscript, evaled,
-    vm = require('vm');
- 
+
+var vm = require('vm');
+
+var localVar = 123;
+var usingscript, evaled;
+
 usingscript = vm.runInThisContext('localVar = 1;', 'myfile.vm');
 console.log('localVar: ' + localVar + ', usingscript: ' + usingscript);
 

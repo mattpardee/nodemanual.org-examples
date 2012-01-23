@@ -3,6 +3,6 @@
 var readline = require('readline');
 
 readline.on('close', function() {
-    console.log('goodbye!');
-    process.exit(0);
- });
+  console.log('goodbye!');
+  process.exit(0);
+});

@@ -1,5 +1,5 @@
 // Example
- 
+
 var buffer1 = new Buffer(50);
 buffer1.fill("h");
 // buffer1 is now just a long stream of h characters
