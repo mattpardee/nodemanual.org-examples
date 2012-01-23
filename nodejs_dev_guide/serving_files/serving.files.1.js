@@ -4,7 +4,7 @@ var fs = require('fs'),
 http = require('http');
 
 http.createServer(function (req, res) {
-  fs.readFile("./index.html", function (err,data) {
+  fs.readFile(__dirname + "/index.html", function (err,data) {
     if (err) {
       res.writeHead(404);
       res.end(JSON.stringify(err));
@@ -13,4 +13,4 @@ http.createServer(function (req, res) {
     res.writeHead(200);
     res.end(data);
   });
-}).listen(process.env.PORT, "0.0.0.0");
+}).listen(process.env.PORT || 8080, "0.0.0.0");
