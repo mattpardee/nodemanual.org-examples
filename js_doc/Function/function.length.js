@@ -1,4 +1,4 @@
-// Example 
+// Example
 
 console.log((function () {}).length);  // 0
 console.log((function (a) {}).length); // 1

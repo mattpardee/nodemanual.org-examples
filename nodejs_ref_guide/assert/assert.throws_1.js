@@ -3,8 +3,8 @@
 var assert = require('assert');
 
 assert.throws(
-    function() {
-        throw new Error("Wrong value");
-    },
-    Error
+  function() {
+    throw new Error("Wrong value");
+  },
+  Error
 );

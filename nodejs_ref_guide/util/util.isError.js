@@ -1,10 +1,10 @@
 // Example
 
 var util = require('util');
- 
-util.isError(new Error())
+
+console.log(util.isError(new Error()));
   // true
-util.isError(new TypeError())
+console.log(util.isError(new TypeError()));
   // true
-util.isError({ name: 'Error', message: 'an error occurred' })
+console.log(util.isError({ name: 'Error', message: 'an error occurred' }));
   // false

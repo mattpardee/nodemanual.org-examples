@@ -1,5 +1,5 @@
 // Example
- 
+
 server.addListener('connection', function (stream) {
-    console.log('someone connected!');
+  console.log('someone connected!');
 });

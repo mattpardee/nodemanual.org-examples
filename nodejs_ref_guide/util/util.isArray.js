@@ -1,10 +1,10 @@
  // Example
 
 var util = require('util');
- 
-util.isArray([])
+
+console.log(util.isArray([]));
   // true
-util.isArray(new Array)
+console.log(util.isArray(new Array));
   // true
-util.isArray({})
+console.log(util.isArray({}));
   // false

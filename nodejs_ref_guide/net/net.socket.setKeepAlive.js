@@ -2,7 +2,7 @@
 
 var net = require('net');
 var assert = require('assert');
- 
+
 var serverConnection;
 var echoServer = net.createServer(function(connection) {
   serverConnection = connection;
@@ -15,11 +15,11 @@ var echoServer = net.createServer(function(connection) {
   });
 });
 echoServer.listen(1337);
- 
+
 echoServer.on('listening', function() {
   var clientConnection = net.createConnection(1337);
   clientConnection.setTimeout(0);
- 
+
   setTimeout(function() {
     // make sure both connections are still open
     assert.equal(serverConnection.readyState, 'open');

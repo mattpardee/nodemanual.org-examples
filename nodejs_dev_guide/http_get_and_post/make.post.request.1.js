@@ -8,9 +8,9 @@ var options = {
   method: 'POST'
 };
 
-// we don't really need a callback for this example, 
+// we don't really need a callback for this example,
 // so let's leave not include one
-var request = http.request(options, function (response) { 
+var request = http.request(options, function (response) {
   var str = '';
   response.on('data', function (chunk) {
     str += chunk;

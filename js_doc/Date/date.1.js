@@ -10,7 +10,7 @@ var end = Date.now();
 var elapsed = end - start; // time in milliseconds
 
 console.log("Static elapsed: " + elapsed);
- 	   
+
 // If you have Date objects:
 var start = new Date();
 
@@ -24,9 +24,12 @@ console.log("Date Elapsed: " + elapsed);
 
 // If you want to test a function and get back its return:
 function printElapsedTime (fTest) {
-    var nStartTime = Date.now(), vReturn = fTest(), nEndTime = Date.now();
-    console.log("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
-    return vReturn;
+  var nStartTime = Date.now(), vReturn = fTest(), nEndTime = Date.now();
+  console.log("Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds");
+  return vReturn;
 }
 
-var yourFunctionReturn = printElapsedTime(yourFunction);
+console.log(printElapsedTime(function() {
+  for (var i=0; i<1000000; i++) {}
+  return 10;
+}));

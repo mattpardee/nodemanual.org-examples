@@ -25,7 +25,7 @@ var processPublicTimeline = function(response) {
       console.log('It\'s saved!');
     });
   });
-}
+};
 
 // make the request, and then end it, to close the connection
 http.request(options, processPublicTimeline).end();

@@ -5,8 +5,7 @@ function Person(name, age) {
 
   // Store the message in internal state
   this.message = name + ", who is " + age + " years old, says hi!";
-
-};
+}
 
 // Define a sync method
 Person.prototype.greet = function greet() {

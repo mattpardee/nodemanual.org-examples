@@ -5,8 +5,7 @@ var numericStringArray = ["80", "9", "700"];
 var numberArray = [40, 1, 5, 200];
 var mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
-function compareNumbers(a, b)
-{
+function compareNumbers(a, b) {
   return a - b;
 }
 

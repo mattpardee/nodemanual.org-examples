@@ -2,9 +2,9 @@
 
 var util = require('util');
 
-util.isDate(new Date())
+console.log(util.isDate(new Date()));
   // true
-util.isDate(Date())
+console.log(util.isDate(Date()));
   // false (without 'new' returns a String)
-util.isDate({})
+console.log(util.isDate({}));
   // false
