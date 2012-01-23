@@ -1,7 +1,6 @@
 // Example: Using split
 
-function splitString(stringToSplit,separator)
-{
+function splitString(stringToSplit, separator) {
   var arrayOfStrings = stringToSplit.split(separator);
   console.log('The original string is: "' + stringToSplit + '"');
   console.log('The separator is: "' + separator + '"');
@@ -16,3 +15,6 @@ var monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
 
 var space = " ";
 var comma = ",";
+
+splitString(tempestString, space);
+splitString(monthString, comma);

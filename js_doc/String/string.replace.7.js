@@ -1,9 +1,7 @@
 // Example: Replacing a Fahrenheit degree with its Celsius equivalent
 
-function f2c(x)
-{
-  function convert(str, p1, offset, s)
-  {
+function f2c(x) {
+  function convert(str, p1, offset, s) {
     return ((p1-32) * 5/9) + "C";
   }
   var s = String(x);

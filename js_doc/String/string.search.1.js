@@ -1,12 +1,12 @@
 // Example: Using search
 
-function testinput(re, str){
+function testinput(re, str) {
   var midstring;
-  if (str.search(re) != -1){
-     midstring = " contains ";
+  if (str.search(re) != -1) {
+    midstring = " contains ";
   }
-  else{
-     midstring = " does not contain ";
+  else {
+    midstring = " does not contain ";
   }
   console.log (str + midstring + re.source);
 }

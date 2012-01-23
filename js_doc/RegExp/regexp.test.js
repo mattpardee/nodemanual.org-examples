@@ -1,7 +1,7 @@
 // Example: Using the test method
 
 function testinput(re, str){
-    var midstring;
+  var midstring;
 	if (re.test(str)) {
 	   midstring = " contains ";
 	} else {

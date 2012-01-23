@@ -1,7 +1,7 @@
 // Example: Printing the contents of an array
 
 function logArrayElements(element, index, array) {
- console.log("a[" + index + "] = " + element);
+  console.log("a[" + index + "] = " + element);
 }
 [2, 5, 9].forEach(logArrayElements);
 // logs:
