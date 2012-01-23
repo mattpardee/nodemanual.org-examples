@@ -2,8 +2,8 @@
 
 var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
 for (var i=0, chr; i < str.length; i++) {
-	if ((chr = getWholeChar(str, i)) === false) {continue;} // Adapt this line at the top of each loop, passing in the whole string and the current iteration and returning a variable to represent the individual character
-	console.log(chr);
+  if ((chr = getWholeChar(str, i)) === false) {continue;} // Adapt this line at the top of each loop, passing in the whole string and the current iteration and returning a variable to represent the individual character
+  console.log(chr);
 }
 
 function getWholeChar (str, i) {

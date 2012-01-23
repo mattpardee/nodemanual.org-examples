@@ -7,5 +7,5 @@ var myArray;
 while ((myArray = myRe.exec(str)) != null) {
   var msg = "Found " + myArray[0] + ".  ";
   msg += "Next match starts at " + myRe.lastIndex;
-  print(msg);
+  console.log(msg);
 }

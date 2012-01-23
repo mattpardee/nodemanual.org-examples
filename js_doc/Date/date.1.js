@@ -29,4 +29,7 @@ function printElapsedTime (fTest) {
   return vReturn;
 }
 
-var yourFunctionReturn = printElapsedTime(yourFunction);
+console.log(printElapsedTime(function() {
+  for (var i=0; i<1000000; i++) {}
+  return 10;
+}));

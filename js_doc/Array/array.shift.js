@@ -2,7 +2,8 @@
 
 // assumes a println function is defined
 var myFish = ["angel", "clown", "mandarin", "surgeon"];
-println("myFish before: " + myFish);
+console.log("myFish before: " + myFish);
+
 var shifted = myFish.shift();
-println("myFish after: " + myFish);
-println("Removed this element: " + shifted);
+console.log("myFish after: " + myFish);
+console.log("Removed this element: " + shifted);
