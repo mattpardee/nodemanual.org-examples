@@ -65,4 +65,4 @@ function pingPongTest(port, host) {
   server.bind(port, host);
 }
 
-pingPongTest(20989, 'localhost');
+pingPongTest(process.env.PORT || 20989, '0.0.0.0');

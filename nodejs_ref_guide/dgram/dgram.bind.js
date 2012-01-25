@@ -10,9 +10,11 @@ server.on("message", function (msg, rinfo) {
 
 server.on("listening", function () {
   var address = server.address();
+  address.address = "0.0.0.0" || address.address;
+  address.port = process.env.PORT || address.port;
   console.log("server listening " +
     address.address + ":" + address.port);
 });
 
-server.bind(41234);
+server.bind(process.env.PORT || 41234);
 // server listening 0.0.0.0:41234

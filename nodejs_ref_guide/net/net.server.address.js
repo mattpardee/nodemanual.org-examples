@@ -9,5 +9,7 @@ var server = net.createServer(function (socket) {
 // grab a random port
 server.listen(function() {
   var address = server.address();
+  address.address = "0.0.0.0" || address.address;
+  address.port = process.env.PORT || address.port;
   console.log("opened server on %j", address);
 });

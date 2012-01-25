@@ -13,6 +13,6 @@ var server = net.createServer(function(c) { //'connection' listener
   c.pipe(c);
 });
 
-server.listen(8124, function() { //'listening' listener
+server.listen(process.env.C9_PORT || 8124, function() { //'listening' listener
   console.log('server bound');
 });
