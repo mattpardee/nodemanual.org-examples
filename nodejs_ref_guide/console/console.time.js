@@ -1,3 +1,5 @@
+// Example: Keeping track of times
+
 console.time('elements');
 for (var i = 0; i < 1000000; i++) {
   ;
