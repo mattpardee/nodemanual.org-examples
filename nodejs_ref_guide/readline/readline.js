@@ -1,7 +1,6 @@
 // Example: Crafting a tiny command line interface:
 
-var readline = require('readline');
-var readline = readline.createInterface(process.stdin, process.stdout);
+var readline = require('readline').createInterface(process.stdin, process.stdout);
 var prefix = 'OHAI> ';
 // Example
 

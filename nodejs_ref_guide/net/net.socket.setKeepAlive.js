@@ -14,10 +14,10 @@ var echoServer = net.createServer(function(connection) {
     connection.end();
   });
 });
-echoServer.listen(1337);
+echoServer.listen(process.env.PORT || 1337);
 
 echoServer.on('listening', function() {
-  var clientConnection = net.createConnection(1337);
+  var clientConnection = net.createConnection(process.env.PORT || 1337);
   clientConnection.setTimeout(0);
 
   setTimeout(function() {
