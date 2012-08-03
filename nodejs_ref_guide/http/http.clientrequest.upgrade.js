@@ -1,6 +1,4 @@
-// Example
-
-// Here's a client-server pair that show you how to listen for the `upgrade` event using `http.getAgent`:
+// Example: A client-server pair that show you how to listen for the `upgrade` event using `http.getAgent`:
 
 var http = require('http');
 
@@ -10,16 +8,14 @@ var srv = http.createServer(function (req, res) {
   res.end('okay');
 });
 
-srv.on('upgrade', function(req, socket, upgradeHead) {
+srv.on('upgrade', function(req, socket, head) {
   socket.write('HTTP/1.1 101 Web Socket Protocol Handshake\r\n' +
     'Upgrade: WebSocket\r\n' +
     'Connection: Upgrade\r\n' +
     '\r\n\r\n'
   );
 
-  socket.ondata = function(data, start, end) {
-    socket.write(data.toString('utf8', start, end), 'utf8'); // echo back
-  };
+  socket.pipe(socket); // echo back
 });
 
 var port = process.env.PORT || 1337;

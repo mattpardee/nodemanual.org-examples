@@ -10,10 +10,10 @@ dns.resolve4('www.google.com', function (err, addresses) {
   addresses.forEach(function (a) {
     dns.reverse(a, function (err, domains) {
       if (err) {
-        console.log('reverse for ' + a + ' failed: ' + err.message);
-      } else {
-        console.log('reverse for ' + a + ': ' + JSON.stringify(domains));
+        throw err;
       }
+
+      console.log('reverse for ' + a + ': ' + JSON.stringify(domains));
     });
   });
 });

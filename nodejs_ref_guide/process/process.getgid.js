@@ -1,3 +1,5 @@
 // Example
  
-console.log('Current gid: ' + process.getgid());
+if (process.getgid) {
+  console.log('Current gid: ' + process.getgid());
+}

@@ -20,7 +20,7 @@ ps.on('exit', function (code) {
 });
 
 grep.stdout.on('data', function (data) {
-  console.log(data);
+  console.log('' + data);
 });
 
 grep.stderr.on('data', function (data) {
