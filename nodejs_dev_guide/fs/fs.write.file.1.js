@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var someText = "Too legit, too legit to quit.";
 
-fs.writeFile(__dirname +  'my_words.txt', someText, function (err) {
+fs.writeFile(__dirname +  '/my_words.txt', someText, function (err) {
   if (err) {
 	  return console.log(err);
   }
