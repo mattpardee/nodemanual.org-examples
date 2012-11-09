@@ -13,4 +13,4 @@ http.createServer(function (req, res) {
     res.writeHead(200);
     res.end(data);
   });
-}).listen(process.env.PORT || 8080, "0.0.0.0");
+}).listen(process.env.PORT || 8080, process.env.IP || "0.0.0.0");

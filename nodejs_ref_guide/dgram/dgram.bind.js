@@ -10,7 +10,7 @@ server.on("message", function (msg, rinfo) {
 
 server.on("listening", function () {
   var address = server.address();
-  address.address = "0.0.0.0" || address.address;
+  address.address = process.env.IP || address.address;
   address.port = process.env.PORT || address.port;
   console.log("server listening " +
     address.address + ":" + address.port);
